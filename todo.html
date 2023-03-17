@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>My Todo App</title>
+    </head>
+    <body>
+        <button>Press me</button>
+        <script>
+            let todo1 = 'Get groceries';
+            let todo2 = 'Wash car';
+            let todo3 = 'Make dinner';
+            
+            //Creating a function that creates a div element at the end of the body that prints out our to do list
+            function addTodo(todoTitle) {
+                let element = document.createElement('div');
+                element.innerText = todoTitle;
+                document.body.appendChild(element);
+            }
+            //Calls the fuction just created to create the div elements
+            addTodo(todo1);
+            addTodo(todo2);
+            addTodo(todo3);
+            
+            //Section 6 exercise 1 creating a fuction to print greets you with your first name
+            function greetings(firstName) {
+                console.log(`hello ` + firstName)
+            }
+            greetings('Alexi');
+
+            //exercise 2 creating a function that converts your name to uppercase when called
+            function toUpper(str) {
+                console.log(str.toUpperCase());
+            }
+            toUpper('Alexi');
+
+            //exercise 3 fuction that converts a parameter "length" from inches to centimeters
+            function convert(length) {
+                console.log(length * 2.54);
+            }
+            convert(5);
+
+        </script>
+    </body>
+</html>
