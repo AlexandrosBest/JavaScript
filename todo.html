@@ -3,26 +3,22 @@
         <title>My Todo App</title>
     </head>
     <body>
-        <button>Press me</button>
+        <input id="todo-title" type="text" />
+        <button onclick="todos.push('new todo');">Add todo</button>
         <script>
-            let todo1 = 'Get groceries';
-            let todo2 = 'Wash car';
-            let todo3 = 'Make dinner';
-
             let todos = ['Get groceries', 'Wash car', 'Make dinner'];
-            todos.push('another todo');
-            
-            //Creating a function that creates a div element at the end of the body that prints out our to do list
-            function addTodo(todoTitle) {
-                let element = document.createElement('div');
-                element.innerText = todoTitle;
-                document.body.appendChild(element);
+
+            todos.forEach(function (todoTitle) {
+                let element = document.createElement('div');  /*  creates a div element and sets it equal to element */
+                element.innerText = todoTitle;                /* This sets the text inside our div and sets it equal to todo */
+                document.body.appendChild(element);           /* This adds out div to the page */
+            });
+
+            function addTodo() {
+                let textbox = document.getElementById('todo-title');
+                let title = textbox.value;
+                todos.push(title);
             }
-            //Calls the fuction just created to create the div elements
-            addTodo(todo1);
-            addTodo(todo2);
-            addTodo(todo3);
-            
 
         </script>
     </body>
