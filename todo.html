@@ -8,6 +8,9 @@
             let todo1 = 'Get groceries';
             let todo2 = 'Wash car';
             let todo3 = 'Make dinner';
+
+            let todos = ['Get groceries', 'Wash car', 'Make dinner'];
+            todos.push('another todo');
             
             //Creating a function that creates a div element at the end of the body that prints out our to do list
             function addTodo(todoTitle) {
@@ -20,23 +23,6 @@
             addTodo(todo2);
             addTodo(todo3);
             
-            //Section 6 exercise 1 creating a fuction to print greets you with your first name
-            function greetings(firstName) {
-                console.log(`hello ` + firstName)
-            }
-            greetings('Alexi');
-
-            //exercise 2 creating a function that converts your name to uppercase when called
-            function toUpper(str) {
-                console.log(str.toUpperCase());
-            }
-            toUpper('Alexi');
-
-            //exercise 3 fuction that converts a parameter "length" from inches to centimeters
-            function convert(length) {
-                console.log(length * 2.54);
-            }
-            convert(5);
 
         </script>
     </body>
