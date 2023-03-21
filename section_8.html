@@ -1,0 +1,36 @@
+<html>
+    <head></head>
+    <body>
+        <button id="todo-button" onclick="change()" >Change</button>
+        <div id="counter">0</div>
+        <button onclick="countup()">Up</button>
+        <button onclick="countdown()">Down</button>
+        <script>
+            // Exercise 1 change inner text to Done when you click the button
+            function change() {
+                let button = document.getElementById('todo-button');
+                button.innerText = "Done";
+            }
+            
+            //Exercise 2
+            let count = 0;
+
+            function countup() {
+                count = count + 1;
+                updateCount();
+            }
+
+            //Exercise 3
+            function countdown() {
+                count = count - 1;
+                updateCount();
+            }
+
+            function updateCount() {
+                let counter = document.getElementById('counter');
+                counter.innerText = count;
+            }
+
+        </script>
+    </body>
+</html>
